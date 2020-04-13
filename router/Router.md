@@ -88,7 +88,7 @@
         import { Redirect } from 'react-router-dom';
     ```
 - Khi bạn muốn sử dụng **location** thì tại cấu hình **Router** ta chỉ cần truyền thêm đối tượng **location** vào **component** mà cần sử dụng đối tượng **location**.
-    ```jsx
+    ```javascript
        {
             path : '/login',
             exact : false,
@@ -118,7 +118,7 @@
 
 ##  Đối tượng Match
 - Khi bạn muốn lấy một số thông tin ở trên **URL** thì bạn có thể dùng đối tượng **match** để lấy dữ liệu về.
-    ```jsx
+    ```javascript
         {
             path : '/products',
             exact : false,
@@ -128,12 +128,10 @@
     ![image-match](https://images.viblo.asia/f0ea77eb-f128-4e4e-bfd9-88fbaeb67f38.png)
 
 ## Đối tượng prompt - Xác nhận trước khi chuyển trang
-    ```jsx
-        import {Prompt} from 'react-router-dom';
+```jsx
+    import {Prompt} from 'react-router-dom';
 
-        <Prompt
-            when={true} // true | false
-            message={ (location) => (`Ban chac chan muon di den ${location.pathname}`) }
-        />
-    ```
-    ![image-prompt](https://images.viblo.asia/f0ea77eb-f128-4e4e-bfd9-88fbaeb67f38.png)
+    <Prompt when={true} // true | false
+        message={ (location) => (`Ban chac chan muon di den ${location.pathname}`) }/>
+ ```
+![image-prompt](https://images.viblo.asia/00e6deaa-24b5-453e-b579-d57330d6ac5e.png)
