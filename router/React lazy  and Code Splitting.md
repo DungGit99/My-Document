@@ -13,7 +13,7 @@
         function MyComponent() {
             return (
                 <div>
-                <OtherComponent />
+                    <OtherComponent />
                 </div>
             );
         }
@@ -25,7 +25,7 @@
         function MyComponent() {
             return (
                 <div>
-                <OtherComponent />
+                    <OtherComponent />
                 </div>
             );
         }
