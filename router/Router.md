@@ -13,7 +13,10 @@
     ```
 ## Chọn loại Router
 - Cho những dự án web, có các loại router là `<BrowserRouter>` và `<HashRouter>`.
-    - `<BrowserRouter>` chúng ta nên sử dụng nó khi chúng ta đã có phần code ở server để xử lý những requests động.
+    - `**<BrowserRouter>**` chúng ta nên sử dụng nó khi chúng ta đã có phần code ở server để xử lý những requests động.
     - `<HashRouter>` dùng cho những trang web tĩnh.
 - chúng ta luôn được khuyến khích sử dụng `<BrowserRouter>`, vì đa số dự án **React** thường đi kèm luôn với **Node.JS** để xử lý thêm nhiều vấn đề phức tạp.
 - Nhưng nếu chúng ta có dự định chỉ cần trang web tĩnh là đủ thì `<HashRouter>` là giải pháp tốt hơn.
+
+## History
+-
