@@ -45,4 +45,59 @@
         }
     ```
     - Tuy nhiên, **React components** lại sử dụng việc khai báo các thẻ cần được **render**. Ví dụ : `<Button />`
--  với **error boundaries** thì khi xảy ra lỗi trong hàm `componentDidMount()` gây ra bởi việc **setState** ở một chỗ nào đó trong cây **component** thì nó vẫn báo đúng vị trí phát sinh lỗi.
+- Với **error boundaries** thì khi xảy ra lỗi trong hàm `componentDidMount()` gây ra bởi việc **setState** ở một chỗ nào đó trong cây **component** thì nó vẫn báo đúng vị trí phát sinh lỗi.
+
+## Project MD Conference
+    ```jsx
+        import React from 'react'
+
+        export class ErrorBoundary extends React.Component {
+            state = { hasError: false }
+
+            static getDerivedStateFromError() {
+                // Update state so the next render will show the fallback UI.
+                return { hasError: true }
+            }
+
+            componentDidCatch(error, errorInfo) {
+                // You can also log the error to an error reporting service
+                if (process.env.NODE_ENV === 'development') {
+                    console.log(error, errorInfo)
+                }
+            }
+
+            render() {
+                return this.state.hasError ? this.props.fallback : this.props.children
+            }
+        }
+    ```
+
+    ```jsx
+        class RouterComponent extends React.PureComponent {
+        render() {
+            return (
+            <Router basename='/cfr'>
+                <React.Suspense fallback={<BounceLoader />}>
+                <ErrorBoundary fallback={<NotFound />}>
+                    <Switch>
+                        <Route
+                        key={index.toString()}
+                        {...routeProps}
+                        render={() => {
+                            const Component = React.lazy(() => import(`../pages/${component}`))
+                            return <Component />
+                        }}
+                        />
+                    ))}
+                    <Redirect to={routesPath.notfound} />
+                    </Switch>
+                </ErrorBoundary>
+                </React.Suspense>
+            </Router>
+            )
+        }
+        }
+
+        export default RouterComponent
+
+    ```
