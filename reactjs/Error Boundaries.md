@@ -48,6 +48,7 @@
 - Với **error boundaries** thì khi xảy ra lỗi trong hàm `componentDidMount()` gây ra bởi việc **setState** ở một chỗ nào đó trong cây **component** thì nó vẫn báo đúng vị trí phát sinh lỗi.
 
 ## Project MD Conference
+- **ErrorBoundary.js**
     ```jsx
         import React from 'react'
 
@@ -71,7 +72,7 @@
             }
         }
     ```
-
+- **index.jsx**
     ```jsx
         class RouterComponent extends React.PureComponent {
         render() {
