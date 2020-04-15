@@ -33,7 +33,7 @@
     ```
 
 ## Component
-- Dạng thông thường, được khai bao dựa trên class của es6
+- Dạng thông thường, được khai bao dựa trên **class** của **es6**
 - Có đầy đủ các **lifecycle**, **local state**
 - Ví dụ:
     ```jsx
@@ -64,7 +64,7 @@
     ```
 
 ## Pure component
-- Giống **Component** ngoại trừ việc đó là nó xử lý **`shouldComponentUpdate`**
+- Giống **`Component`** ngoại trừ việc đó là nó xử lý **`shouldComponentUpdate`**
     - Đối với **`Component`** luôn return **true** trong hàm **`shouldComponentUpdate`** có nghĩa là mỗi lần **props** hay **state** gọi nó sẽ đi thẳng xuống **render**
     - Đối với **`PureComponent`** mỗi lần props và state nó nhảy vào **`shouldComponentUpdate`** so sánh giá trị trước và sau
         - Nếu nó === thì nó không **render** còn khác sẽ **render**
