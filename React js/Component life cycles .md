@@ -111,11 +111,11 @@
 
 ## Unmounting
 - **`componentWillUnmount()`**
-    - Cleartimeout hoặc interval nếu có dùng.
-    - Reset dữ liệu trên redux nếu cần thiết.
-        - Có 1 routing cha sau routing con sẽ dùng dữ liệu trên redux của routing cha
-        - Sau đó vô tình đi qua routing khác routing cha, và muốn xóa dữ liệu routing cha đi nếu ko sẽ tính toán dữ liệu sai
-        - Khi routing cha bị unmout thì phải reset dữ liệu trên redux
+    - **Cleartimeout** hoặc **interval** nếu có dùng.
+    - **Reset** dữ liệu trên **redux** nếu cần thiết.
+        - Có 1 **routing** cha sau **routing** con sẽ dùng dữ liệu trên **redux** của **routing** cha
+        - Sau đó vô tình đi qua **routing** khác **routing** cha, và muốn xóa dữ liệu **routing** cha đi nếu ko sẽ tính toán dữ liệu sai
+        - Khi **routing** cha bị **unmout** thì phải **reset** dữ liệu trên **redux**
         ```jsx
             class Countdown extends PureComponent {
                 constructor(props) {
