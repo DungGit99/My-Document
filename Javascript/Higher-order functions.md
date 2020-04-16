@@ -2,10 +2,12 @@
 
 - khi ta định nghĩa một **Function**, ta thường nhận **param** ( tham số đầu vào ) là các **String**, **Number**, **Boolean**, **Array** hoặc **Object** rồi lại **return** ( trả về ) các **String**, **Number**, **Boolean**, **Array** hoặc **Object**.
 - Đối với **Higher Order Function** (HOF), **param** có thể là **Function**, và lại **return** ra có thể cũng là **Function**.
+
     ```jsx
-        Higher-order functions là các hàm lấy các hàm khác làm đối số hoặc trả về các hàm làm kết quả của chúng.
+    Higher-order functions là các hàm lấy các hàm khác làm đối số hoặc trả về các hàm làm kết quả của chúng.
     ```
     ![image](https://images.viblo.asia/full/b88c3e38-0af3-4d94-8540-ff2fe3248e79.jpg)
+
 ## Gán Function đến các variable
 - Chúng ta có thể gán **Function** đến các **variable**.
     ```javascript
