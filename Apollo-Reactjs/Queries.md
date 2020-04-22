@@ -155,3 +155,28 @@
 
         export default DogPhoto;
     ```
+
+    - **App.js**
+        ```jsx
+            import React, { useState } from 'react';
+            import Dogs from './components/Dogs'
+            import DogPhoto from './components/DogPhoto';
+            function App() {
+
+                const [ selectDog,setSelectDog] = useState(null)
+
+                const onDogSelected = (e) =>{
+                    setSelectDog(e.target.value);
+                }
+
+                return (
+                    <div>
+                        <h2>Building Query components 🚀</h2>
+                        {selectDog && <DogPhoto breed={selectDog}/>}
+                        <Dogs onDogSelected={onDogSelected}/>
+                    </div>
+                );
+            }
+
+            export default App;
+        ```
