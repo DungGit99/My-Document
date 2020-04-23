@@ -208,7 +208,7 @@
 
 ## Authentication Over WebSocket
 
-    ```jsx
+```jsx
         import { execute, subscribe } from 'graphql';
         import { SubscriptionServer } from 'subscriptions-transport-ws';
         import { schema } from './schema';
@@ -246,11 +246,11 @@
             server: websocketServer
         }
         );
-    ```
+```
 
 ## Express
 
-    ```jsx
+```jsx
         import express from 'express';
         import bodyParser from 'body-parser';
         import { graphqlExpress } from 'apollo-server-express';
@@ -278,4 +278,4 @@
                 path: '/subscriptions',
             });
         });
-    ```
+```
