@@ -2,6 +2,8 @@
 
 ## Objects là một loại tham chiếu
 
+- [https://viblo.asia/p/3-cach-de-clone-objects-trong-javascript-Az45baqNlxY]
+- [https://viblo.asia/p/clone-mot-object-trong-javascript-nhu-the-nao-la-chuan-naQZRpg05vx]
 - **Object** là 1 loại tham chiếu
 - Vì vậy khi sử dụng dấu = , nó đã sao chép con trỏ vào không gian bộ nhớ mà nó chiếm
 - Các kiểu tham chiếu không giữ các giá trị, chúng là 1 con trỏ tới giái trị trong bộ nhớ
